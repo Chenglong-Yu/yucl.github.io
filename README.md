@@ -1,6 +1,6 @@
-# zhanglj37.github.io
+# yucl.github.io
 
-This is the personal website of Lijin Zhang
+This is the personal website of Chenglong Yu
 
-https://lijinzhang.com
+https://chenglingyu.com
 
