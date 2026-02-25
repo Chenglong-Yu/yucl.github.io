@@ -2,5 +2,5 @@
 
 This is the personal website of Chenglong Yu
 
-https://chenglingyu.com
+https://chenglongyu.com
 
