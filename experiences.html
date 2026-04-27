@@ -145,17 +145,12 @@
       <li><strong>Design</strong> a forward-looking AIGC video detection framework with cross-model generalization capabilities, specifically targeting extreme scenarios involving unknown generative 
         models and extremely limited data samples. </li>
       -->
-      <li><strong>Investigation of Cutting-Edge Generation and Detection Models</strong>: Reviewed the evolutionary trajectory of AIGC video generation technologies from 2023 to 2026 (encompassing U-Net, 
-        DiT, Autoregressive, and Flow Matching architectures), and explored the underlying physical logic and multimodal generation mechanisms of foundational models such as Sora and Veo. Concurrently, 
-        analyzed the cross-model generalization potential and latency bottlenecks of detection frameworks based on diffusion priors and Multimodal Large Language Models (MLLMs) under zero/few-shot scenarios. </li>
-      <li><strong>Unified Representation Architecture Design for Unknown Model Detection</strong>: To address the problem of traditional detectors to "superficial feature overfitting," designed a detection 
-        architecture based on "diffusion synthetic domain mapping and cross-domain feature alignment." This framework employs a pre-trained diffusion model as a domain translator to extract unified reconstruction
-        error space features, and integrates supervised contrastive learning to achieve feature space alignment for capturing generalized forgery representations. Furthermore, employed knowledge distillation to 
-        transfer the discriminative capabilities of the teacher network to a lightweight student network, balancing generalization with real-time inference demands. </li>
-      <li><strong>Lightweight Detection Architecture Design for Low-Resource Scenarios</strong>: Formulated a lightweight detection scheme based on "frequency domain decoupling and meta-learning" tailored for 
-        zero/few-shot settings. Introduced Discrete Wavelet Transform (DWT) at the input stage to decouple low-frequency semantics, forcing the model to focus on high-frequency generative residuals to prevent
-        content overfitting. In few-shot scenarios, enabled rapid detection by constructing a metric space via episodic meta-learning; in zero-shot scenarios, applied Support Vector Machines (SVM) to model the
-        high-frequency feature manifold boundaries of authentic videos. </li>
+      <li><strong>Investigation of Cutting-Edge Generation and Detection Models</strong>: Investigated the evolution of AIGC video generation (e.g., DiT, Autoregressive) and evaluated the zero/few-shot 
+        generalization and latency of MLLM-based detection frameworks for unknown models. </li>
+      <li><strong>Unified Representation Architecture Design for Unknown Model Detection</strong>: To address the problem of traditional detectors to "superficial feature overfitting", designed a detection 
+        architecture based on "diffusion synthetic domain mapping and cross-domain feature alignment." </li>
+      <li><strong>Lightweight Detection Architecture Design for Low-Resource Scenarios</strong>: Designed a lightweight detection scheme based on "frequency domain decoupling and meta-learning" tailored for 
+        zero/few-shot settings. </li>
     </ul>
    
   <h2>Honors & Awards</h2>
