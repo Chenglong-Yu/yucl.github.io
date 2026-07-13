@@ -21,9 +21,6 @@ body {
   pointer-events: none;     /* do not influence pointer behavior */
 }
 
-
-
-
 /* header and footer areas */
 .menu { padding: 0; }
 .menu li { display: inline-block; }
