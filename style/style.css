@@ -66,9 +66,6 @@ table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
 
-
-
-
 .classic-nav {
   display: flex;
   align-items: center;
@@ -202,7 +199,6 @@ a:hover {
   box-sizing: border-box;
 }
 
-/* 左侧使用与中国移动 Logo 相协调的蓝绿渐变 */
 .internship-card--china-mobile::before {
   content: "";
   position: absolute;
@@ -211,12 +207,18 @@ a:hover {
   left: 0;
   width: 5px;
 
+  /* Hard color stops: no blended gradient or shadow */
   background: linear-gradient(
     180deg,
     #78be20 0%,
-    #32a9c7 48%,
+    #78be20 33.33%,
+    #32a9c7 33.33%,
+    #32a9c7 66.66%,
+    #1687c9 66.66%,
     #1687c9 100%
   );
+
+  box-shadow: none;
 }
 
 /* Microsoft internship card */
