@@ -222,6 +222,61 @@ a:hover {
   );
 }
 
+/* Microsoft internship card */
+.internship-card--microsoft::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+
+  /* Microsoft official brand colors */
+  background: linear-gradient(
+    180deg,
+    #f25022 0%,
+    #f25022 25%,
+    #7fba00 25%,
+    #7fba00 50%,
+    #00a4ef 50%,
+    #00a4ef 75%,
+    #ffb900 75%,
+    #ffb900 100%
+  );
+}
+
+.internship-card--microsoft .internship-card__role {
+  color: #0067b8;
+}
+
+.internship-card--microsoft .internship-card__tags span {
+  color: #285f82;
+  background: #f4f9fc;
+  border-color: #d4e6f1;
+}
+
+.internship-card--microsoft .internship-card__work li::before {
+  background: linear-gradient(
+    135deg,
+    #f25022,
+    #00a4ef
+  );
+
+  box-shadow: 0 0 0 4px rgba(0, 164, 239, 0.10);
+}
+
+.internship-card--microsoft .internship-card__deliverable::before {
+  background: #0067b8;
+}
+
+/* Microsoft horizontal logo */
+.internship-card__logo--microsoft {
+  width: 84px;
+  height: auto;
+  max-height: 68px;
+  object-fit: contain;
+}
+
 /* 官方 Logo 容器 */
 .internship-card__logo-box {
   width: 92px;
