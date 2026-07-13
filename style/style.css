@@ -183,7 +183,259 @@ a:hover {
   width: auto;
 }
 
+/* ================================
+   Research internship cards
+   ================================ */
 
+.internship-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  overflow: hidden;
+
+  margin: 0 0 36px;
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dfe8f1;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(22, 77, 120, 0.09);
+
+  box-sizing: border-box;
+}
+
+/* 左侧使用与中国移动 Logo 相协调的蓝绿渐变 */
+.internship-card--china-mobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+
+  background: linear-gradient(
+    180deg,
+    #78be20 0%,
+    #32a9c7 48%,
+    #1687c9 100%
+  );
+}
+
+/* 官方 Logo 容器 */
+.internship-card__logo-box {
+  width: 92px;
+  height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e5edf4;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(22, 77, 120, 0.08);
+}
+
+/* 使用仓库中已有的中国移动官方 Logo */
+.internship-card__logo {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.internship-card__content {
+  min-width: 0;
+}
+
+.internship-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.internship-card__company {
+  margin: 0;
+  color: #172033;
+  font-size: 23px;
+  line-height: 1.25;
+}
+
+.internship-card__role {
+  margin: 4px 0 0;
+  color: #1679b5;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.internship-card__date {
+  flex: none;
+  padding: 6px 11px;
+
+  color: #5f6b7a;
+  background: #f3f8fb;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.internship-card__project {
+  margin: 19px 0 7px;
+  color: #202b3c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.internship-card__summary {
+  margin: 0 0 17px;
+  color: #5c6778;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.internship-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.internship-card__tags span {
+  padding: 5px 9px;
+
+  color: #27688f;
+  background: #f5faff;
+  border: 1px solid #d8e9f4;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.internship-card__work {
+  display: grid;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.internship-card__work li {
+  position: relative;
+  margin: 0;
+  padding-left: 22px;
+
+  color: #3f4b5c;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.internship-card__work li::before {
+  content: "";
+  position: absolute;
+  top: 0.66em;
+  left: 1px;
+
+  width: 7px;
+  height: 7px;
+
+  background: linear-gradient(135deg, #78be20, #1687c9);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(22, 135, 201, 0.09);
+}
+
+.internship-card__work strong {
+  color: #202b3c;
+}
+
+.internship-card__deliverables {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 15px;
+
+  margin-top: 22px;
+  padding-top: 17px;
+
+  border-top: 1px solid #e5ebf1;
+}
+
+.internship-card__deliverables-title {
+  color: #778191;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.internship-card__deliverable {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #465366;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.internship-card__deliverable::before {
+  content: "✓";
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 17px;
+  height: 17px;
+
+  color: #ffffff;
+  background: #1687c9;
+  border-radius: 50%;
+
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* Mobile layout */
+@media (max-width: 680px) {
+  .internship-card {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding: 23px 20px;
+  }
+
+  .internship-card__logo-box {
+    width: 86px;
+    height: 86px;
+  }
+
+  .internship-card__logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .internship-card__header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .internship-card__date {
+    align-self: flex-start;
+  }
+
+  .internship-card__company {
+    font-size: 21px;
+  }
+}
 
 #back-to-top {
   position: fixed;
